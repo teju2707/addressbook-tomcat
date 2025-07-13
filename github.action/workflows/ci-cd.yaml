@@ -1,0 +1,14 @@
+pipeline {
+    any
+        }
+    }
+    stages {
+        stage('Clean and Compile') {
+            steps {
+                withMaven(maven: 'Maven 3.8.6') { // Replace with your Maven installation name
+                    sh 'mvn clean compile'
+                }
+            }
+        }
+    }
+}
